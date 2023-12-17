@@ -1,5 +1,15 @@
 const extendHex = (shortHex) => {
   // write your code here
+
+	let i = 0;
+	while(i<shortHex.length){
+		if(shortHex.charCodeAt(i)>64 && shortHex.charCodeAt(i)<91){
+		 shortHex =	shortHex.toUpperCase();
+			// alert(shortHex);
+			break;
+		}
+		i++;
+	}
 	
 	if(shortHex.length != 4)
 	{
@@ -11,5 +21,5 @@ const extendHex = (shortHex) => {
 };
 
 // Do not change the code below.
-const shortHex = prompt("Enter Short Hex.");
+const shortHex = prompt("Enter Short Hex.");  
 alert(extendHex(shortHex));
